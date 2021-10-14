@@ -25,11 +25,10 @@ int W, H;
                 ch = st.at(j - 1);
                 B[j] = ch;
                 
-                if (ch == 'Y') {
+                if (ch == 'Y') 
                     A[i][j] = true;
-                } else {
-                    A[i][j] = false;
-                }
+                  else 
+                    A[i][j] = false;    
         }
     }
     
@@ -56,6 +55,7 @@ int W, H;
 
         }
     }
+    
     for (int j = 1; j <= W; j++) {
             if (A[H][j]) {
                 flag = true;
@@ -63,10 +63,10 @@ int W, H;
             }
         }
 
-        if (flag) {
+        if (flag)
             cout << "YES";
-        } else {
+          else 
             cout << "NO";
-        }
+        
     return 0;
 }
