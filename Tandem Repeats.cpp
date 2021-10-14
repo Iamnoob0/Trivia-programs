@@ -37,7 +37,7 @@ int printTandem(int j, int k){
         if (st[0] != s[x])
         break;
         
-        if (st == s.substr(x + L, L) )
+        if (st == s.substr(x + L, L))
         {
             count++;
             x += L;
