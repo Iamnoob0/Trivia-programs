@@ -8,28 +8,11 @@ int high, low;
 int scrtNum;
 int X; 
 
-bool isCharACompExpr(char _ch){
-    return _ch == '>' || _ch == '<' || _ch == '=';
-}
+bool isCharACompExpr(char _ch);
 
-char guessHostAnswer(int _X){
-    char _Answer;
-    
-    do{
-        
-    cout << "Is " << X << " your secret number " << endl;
-    cin >> _Answer;
-    }
-    while(!isCharACompExpr(_Answer));
-    
-    return _Answer;
-}
+char guessHostAnswer(int _X);
 
-int selectNumber(int _high, int _low){
-
-    return rand() % (_high - _low + 1) + _low;
-    // return (_high + _low)/2;
-}
+int selectNumber(int _high, int _low);
 
 int main(){
     srand(time(0));
@@ -62,4 +45,24 @@ int main(){
     cout << "The secret number is " << X << endl;
     
     return 0;
+}
+
+bool isCharACompExpr(char _ch){
+    return _ch == '>' || _ch == '<' || _ch == '=';
+}
+
+char guessHostAnswer(int _X){
+    char _Answer;
+    
+    do{
+    cout << "Is " << X << " your secret number " << endl;
+    cin >> _Answer;
+    }
+    while(!isCharACompExpr(_Answer));
+    
+    return _Answer;
+}
+
+int selectNumber(int _high, int _low){
+    return rand() % (_high - _low + 1) + _low;
 }
